@@ -6,6 +6,9 @@ name = "folia-sync"
 main = "src/cloudflare.ts"
 compatibility_date = "2026-07-01"
 
+[vars]
+SYNC_TOKEN = "FoliaSyncTest2026"
+
 [[d1_databases]]
 binding = "FOLIA_SYNC_DB"
 database_name = "folia-sync"
