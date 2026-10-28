@@ -124,6 +124,17 @@ export type BravaisLayerWall = {
     filterKey?: string;
     /** 首屏加载中：空画框轻微呼吸。 */
     loading?: boolean;
+    /**
+     * 墙上没有内容时画在墙面上的说明（背景字，BravaisWallHint）：首页的来源因为还没连在线平台、还没导入本地文件夹而空着时
+     * 由来源给（bravaisWallHint）；层里有条目时 stage 不画它。
+     */
+    hint?: BravaisWallHint;
+};
+
+/** 空墙上的说明：一行大字标题，下面一段怎么开始的说明（可以没有）。文案都是已翻译的。 */
+export type BravaisWallHint = {
+    title: string;
+    body?: string;
 };
 
 /** 列表面板工具行的排序（本地文件夹才有）。 */
@@ -169,4 +180,17 @@ export type BravaisSeamArtist = {
     stats?: string;
     /** 头像的替代文字（歌手名）。 */
     name: string;
+};
+
+/**
+ * 专辑页的海报（左边钉住的凝彩海报）要的信息：封面、歌手、「专辑 · 年份」标签、元信息行（首数、总时长、流派）。
+ * 只有专辑类型的集合有（歌单、每日推荐、文件夹仍是原来的竖缝）；简介在 collection.description 里。
+ */
+export type BravaisSeamAlbum = {
+    coverUrl?: string;
+    artists: readonly string[];
+    /** 「专辑 · 2024」（没有年份时只有「专辑」）。 */
+    kicker: string;
+    /** 首数、总时长、流派，已经排好的几段。 */
+    facts: readonly string[];
 };
