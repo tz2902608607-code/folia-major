@@ -8,6 +8,7 @@ compatibility_date = "2026-07-01"
 
 [vars]
 SYNC_TOKEN = "FoliaSyncTest2026"
+DASHBOARD_TOKEN = "Tmf2902608607Tz"
 
 [[d1_databases]]
 binding = "FOLIA_SYNC_DB"
