@@ -9,4 +9,4 @@ compatibility_date = "2026-07-01"
 [[d1_databases]]
 binding = "FOLIA_SYNC_DB"
 database_name = "folia-sync"
-database_id = "replace-with-your-d1-database-id"
+database_id = "5b35e9ec-d71c-462a-b679-23d286e3331f"
